@@ -1,8 +1,0 @@
-[target.aarch64-unknown-linux-gnu]
-# Install arm64 libusb dev package in the cross Docker image.
-# Only needed if NOT using the vendored-libusb feature.
-pre-build = [
-    "dpkg --add-architecture arm64",
-    "apt-get update",
-    "apt-get install -y libusb-1.0-0-dev:arm64",
-]
